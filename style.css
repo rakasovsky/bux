@@ -1,0 +1,542 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("/fonts/Oswald-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/RobotoCondensed-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Oswald";
+}
+
+h1 {
+  font-size: 140px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 56px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.bold {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.normal {
+  font-size: 24px;
+}
+
+.small {
+  font-size: 18px;
+}
+
+.little {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+:root {
+  --gold-gradient: linear-gradient(89.69deg, #CF9F66 5.29%, #FFDC9C 46.7%, #946331 98.34%);
+  --second: #191919
+  --black-gradient: linear-gradient(180deg, #2B2B2B 0%, #3B3B3B 100%);
+}
+
+.gold_text {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  background-color: black;
+  padding: 20px;
+}
+
+.btn {
+  font-family: "Oswald";
+  max-width: 320px;
+  width: 100%;
+  height: 56px;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 8px;
+  display: block;
+  text-align: center;
+  align-content: center;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.personal {
+  font-family: "Oswald";
+  max-width: 552px;
+  width: 100%;
+  height: 56px;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 8px;
+  display: block;
+  text-align: center;
+  align-content: center;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.golden {
+  background: var(--gold-gradient);
+  color: rgb(25, 25, 25);
+}
+
+.golden::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.3s ease-out;
+  pointer-events: none;
+}
+
+.golden:hover::after {
+  border-color: #000;
+}
+
+.matte {
+  color: white;
+  background: linear-gradient(180deg, #2B2B2B 0%, #3B3B3B 100%);
+}
+
+.matte::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.3s ease-out;
+  pointer-events: none;
+}
+
+.matte:hover::after {
+  border-color: #000;
+}
+
+.matte:active {
+  background: rgb(25, 25, 25);
+}
+
+.combi {
+  display: inline-block;
+  background: #000;
+  position: relative;
+}
+
+.combi::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 2px;
+  background: var(--gold-gradient);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.combi span {
+  display: block;
+  background: #000;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: var(--gold-gradient);
+}
+
+.combi:hover, .combi:active {
+  background-image: var(--gold-gradient);
+}
+
+.combi:hover span, .combi:active span {
+  color: rgb(25, 25, 25);
+}
+
+.insta_btn {
+  max-width: 295px;
+  width: 100%;
+  height: 56px;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 8px;
+  display: block;
+  text-align: center;
+  align-content: center;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(57, 57, 57);
+}
+
+.insta_btn span {
+  display: block;
+  background: #000;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: var(--gold-gradient);
+}
+
+.insta_btn:hover {
+  background: var(--gold-gradient);
+}
+
+.insta_btn:hover span {
+  color: rgb(25, 25, 25);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+}
+
+.hero_block {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+}
+
+.hero_one {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 609px;
+  gap: 24px;
+}
+.hero_one h1 {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero_one p {
+  color: white;
+}
+.hero_one .hero_btns {
+  padding-top: 32px;
+  display: flex;
+  gap: 24px;
+}
+
+.hero_two {
+  width: 100%;
+  max-width: 661px;
+  height: 708px;
+}
+
+.cards_component_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1240px;
+  gap: 20px;
+  background-color: #000;
+}
+
+.standart_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  height: 232px;
+  background: linear-gradient(249.78deg, #2B2B2B 0%, #3B3B3B 100%);
+  border-radius: 16px;
+  padding: 56px 24px;
+  gap: 16px;
+}
+.standart_card h3 {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.standart_card p {
+  color: white;
+}
+
+.about_section {
+  background-color: #000;
+}
+
+.about_wrapper {
+  display: flex;
+  gap: 87px;
+}
+.about_wrapper .about_text_block {
+  width: 100%;
+  max-width: 648px;
+}
+.about_wrapper .about_text_block .pros_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+  padding-top: 59px;
+  padding-bottom: 109px;
+}
+.about_wrapper .about_text_block .pros_wrapper .pros_block {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.about_wrapper .about_text_block .pros_wrapper .pros_block .pros_item {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 288px;
+  height: 44px;
+}
+.about_wrapper .about_text_block .pros_wrapper .pros_block .pros_item img {
+  width: 57px;
+  height: 44px;
+}
+.about_wrapper .about_text_block .pros_wrapper .pros_block .pros_item p {
+  color: white;
+}
+.about_wrapper .about_text_block .about_btn_wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.about_wrapper .about_text_block .about_btn_wrapper p {
+  max-width: 260px;
+  color: rgb(86, 86, 86);
+}
+.about_wrapper .about_photo_block {
+  width: 100%;
+  max-width: 505px;
+}
+
+.info_section {
+  background-color: #000;
+}
+.info_section .info_top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info_section .info_top h2 {
+  padding-bottom: 16px;
+}
+.info_section .info_top h4 {
+  color: white;
+  font-weight: 400;
+  text-align: center;
+}
+.info_section .info_bottom {
+  padding-top: 56px;
+  display: flex;
+  gap: 20px;
+}
+.info_section .info_bottom img {
+  max-width: 610px;
+  width: 100%;
+  height: 420px;
+}
+.info_section .info_bottom .info_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 610px;
+  width: 100%;
+  gap: 20px;
+}
+.info_section .info_bottom .info_text_wrapper p {
+  color: white;
+}
+
+.bussinnes_section {
+  background-color: #000;
+}
+.bussinnes_section p {
+  color: white;
+}
+
+.tarif_section {
+  background-color: #000;
+}
+.tarif_section .tarif_cards_wrapper {
+  display: flex;
+  padding-top: 56px;
+  gap: 20px;
+}
+.tarif_section .tarif_cards_wrapper .tarif_card {
+  width: 100%;
+  max-width: 505px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 40px;
+  border-radius: 16px;
+}
+.tarif_section .tarif_cards_wrapper .tarif_card .tarif_card_top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tarif_section .tarif_cards_wrapper .tarif_card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tarif_section .tarif_cards_wrapper .tarif_card .tarif_card_bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  padding-top: 32px;
+  width: 100%;
+  align-items: center;
+}
+.tarif_section .tarif_cards_wrapper .tarif_card .tarif_card_bottom h4 {
+  font-weight: 400;
+}
+.tarif_section .tarif_cards_wrapper .tarif_card .tarif_card_bottom div {
+  text-align: center;
+}
+.tarif_section .tarif_cards_wrapper .tarif_standart_card {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(198.78deg, #2A2A2A -1.46%, #3E3E3E 107.55%);
+}
+.tarif_section .tarif_cards_wrapper .tarif_golden_card {
+  color: var(--second);
+  background: var(--gold-gradient);
+}
+.tarif_section .tarif_cards_wrapper .tarif_golden_card .normal {
+  color: white;
+}
+.tarif_section .tarif_cards_wrapper .tarif_golden_card .tarif_card_bottom h4 {
+  color: white;
+  font-weight: 400;
+}
+
+.how_to_section .standart_card img {
+  width: 32px;
+  height: 32px;
+}
+
+.personal_consultation_section {
+  background-color: #000;
+}
+.personal_consultation_section .personal_wrapper {
+  display: flex;
+  width: 100%;
+  gap: 193px;
+}
+.personal_consultation_section .personal_wrapper .personal_one {
+  display: flex;
+  width: 100%;
+  max-width: 560px;
+  flex-direction: column;
+  gap: 24px;
+}
+.personal_consultation_section .personal_wrapper .personal_one p {
+  color: white;
+}
+.personal_consultation_section .personal_wrapper .personal_one .personal_items_wrapper {
+  display: flex;
+  gap: 20px;
+}
+.personal_consultation_section .personal_wrapper .personal_one .personal_items_wrapper .personal_item {
+  background-color: rgb(57, 57, 57);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 173px;
+  height: 40px;
+  border-radius: 8px;
+}
+.personal_consultation_section .personal_wrapper .personal_one .personal_items_wrapper .personal_item span {
+  display: block;
+  background: #000;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: var(--gold-gradient);
+}
+.personal_consultation_section .personal_wrapper .personal_one .personal_details {
+  color: rgb(86, 86, 86);
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 64px;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  .bold {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .normal {
+    font-size: 16px;
+  }
+  .small {
+    font-size: 14px;
+  }
+  .little {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=style.css.map */

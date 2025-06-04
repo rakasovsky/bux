@@ -1,0 +1,598 @@
+// Fonts 
+@font-face {
+    font-family: "Oswald";
+    src: url("/fonts/Oswald-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: url("/fonts/RobotoCondensed-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  h1,h2,h3,h4,h5{
+    font-family: "Oswald";
+  }
+
+
+//   Font sizes
+
+  h1 {
+    font-size: 140px;
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 56px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .bold {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .normal {
+    font-size: 24px;
+  }
+  .small {
+    font-size: 18px;
+  }
+  .little {
+    font-size: 16px;
+  }
+
+body {
+    font-family: "Roboto";
+}
+
+
+// Colors
+:root {
+    --gold-gradient: linear-gradient(89.69deg, #CF9F66 5.29%, #FFDC9C 46.7%, #946331 98.34%);
+    --second: #191919
+    --black-gradient: linear-gradient(180deg, #2B2B2B 0%, #3B3B3B 100%);
+
+  }
+
+.gold_text {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+// Buttons
+.buttons {
+    display: flex;
+    gap: 20px;
+    background-color: black;
+    padding: 20px;
+}
+
+
+.btn {
+    font-family: "Oswald";
+    max-width: 320px;
+    width: 100%;
+    height: 56px;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+
+    position: relative;
+    border: none; 
+    outline: none;
+    cursor: pointer;
+}
+
+.personal {
+    font-family: "Oswald";
+    max-width: 552px;
+    width: 100%;
+    height: 56px;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+
+    position: relative;
+    border: none; 
+    outline: none;
+    cursor: pointer;
+}
+
+
+.golden {
+    background: var(--gold-gradient);
+    color: rgba(25, 25, 25, 1);
+}
+
+.golden::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-out;
+    pointer-events: none; 
+}
+.golden:hover::after { 
+    border-color: #000;
+}
+
+.matte {
+    color: white;
+    background: linear-gradient(180deg, #2B2B2B 0%, #3B3B3B 100%);
+}
+
+.matte::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-out;
+    pointer-events: none; 
+}
+.matte:hover::after { 
+    border-color: #000;
+}
+.matte:active {
+    background: rgba(25, 25, 25, 1);
+    // transition: background 0.3s ease-out;
+}
+.combi {
+    display: inline-block;
+    background: #000; 
+    position: relative;
+ 
+    
+}
+.combi::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px; 
+    padding: 2px; 
+    background:var(--gold-gradient); 
+    mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+  .combi span {
+    display: block;
+    background: #000; 
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: var(--gold-gradient);
+  }
+
+  .combi:hover, .combi:active {
+    background-image: var(--gold-gradient);
+  }
+  .combi:hover span, .combi:active span {
+    color: rgba(25, 25, 25, 1);
+  }
+
+
+//Insta btn 
+.insta_btn {
+    max-width: 295px;
+    width: 100%;
+    height: 56px;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    position: relative;
+    border: none; 
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(57, 57, 57, 1);
+}
+
+.insta_btn span {
+    display: block;
+    background: #000; 
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: var(--gold-gradient);
+}
+
+.insta_btn:hover {
+    background: var(--gold-gradient);
+}
+.insta_btn:hover span {
+    color: rgba(25, 25, 25, 1);
+}
+
+
+// Containers
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1240px;
+}
+
+
+// Hero Section
+.hero_block {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+}
+.hero_one {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 609px;
+    gap: 24px;
+    h1 {
+        background: var(--gold-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+    }
+    p {
+        color: white;
+    }
+    .hero_btns {
+        padding-top: 32px;
+        display: flex;
+        gap: 24px;
+    }
+}
+.hero_two {
+    width: 100%;
+    max-width: 661px;
+    height: 708px;
+}
+
+
+// CARDS COMPONENT
+.cards_component_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1240px;
+    gap: 20px;
+    background-color: #000;
+}
+
+.standart_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    height: 232px;
+    background: linear-gradient(249.78deg, #2B2B2B 0%, #3B3B3B 100%);
+    border-radius: 16px;
+    padding: 56px 24px;
+    gap: 16px;
+
+    h3 {
+        background: var(--gold-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        color: white;
+    }
+}
+
+// ABOUT SECTION
+.about_section {
+    background-color: #000;
+}
+.about_wrapper {
+    display: flex;
+    gap: 87px;
+
+    .about_text_block {
+        width: 100%;
+        max-width: 648px;
+        
+        .pros_wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 27px;
+            padding-top: 59px;
+            padding-bottom: 109px;
+            
+            .pros_block {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+
+                .pros_item {
+                    display: flex;
+                    gap: 16px;
+                    width: 100%;
+                    max-width: 288px;
+                    height: 44px;
+
+                    img {
+                        width: 57px;
+                        height: 44px;
+                    }
+                    p {
+                        color: white;
+                    }
+                }
+            }
+        }
+        .about_btn_wrapper {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            p {
+                max-width: 260px;
+                color: rgba(86, 86, 86, 1);
+            }
+        }
+
+    }
+    .about_photo_block {
+        width: 100%;
+        max-width: 505px;
+    }
+}
+
+
+// INFO SECTION
+.info_section{
+    background-color: #000;
+
+    .info_top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            padding-bottom: 16px
+        }
+        h4 {
+            color: white;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+
+    .info_bottom {
+        padding-top: 56px;
+        display: flex;
+        gap: 20px;
+
+        img {
+            max-width: 610px;
+            width: 100%;
+            height: 420px;
+        }
+
+        .info_text_wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: 610px;
+            width: 100%;
+            gap: 20px;
+
+            p {
+                color: white;
+            }
+        }
+    }
+}
+
+
+// BUSSINES COURSE
+.bussinnes_section {
+    background-color: #000;
+    
+    p {
+        color: white;
+    }
+}
+
+
+// Tarif Section
+
+.tarif_section {
+    background-color: #000;
+
+
+    .tarif_cards_wrapper {
+        display: flex;
+        padding-top: 56px;
+        gap: 20px;
+
+        .tarif_card {
+            width: 100%;
+            max-width: 505px;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            padding: 40px;
+            border-radius: 16px;
+
+            .tarif_card_top {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+            .tarif_card_bottom {
+                display: flex;
+                flex-direction: column;
+                gap: 44px;
+                padding-top: 32px;
+                width: 100%;
+                align-items: center;
+
+                h4 {
+                    font-weight: 400;
+                }
+                div {
+                    text-align: center;
+                }
+            }
+        }
+        .tarif_standart_card {
+            color: rgba(255, 255, 255, 1);
+            background: linear-gradient(198.78deg, #2A2A2A -1.46%, #3E3E3E 107.55%);
+
+        }
+        .tarif_golden_card {
+            color: var(--second);
+            background: var(--gold-gradient);
+
+            .normal {
+                color: white;
+            }
+
+            .tarif_card_bottom {
+                h4 {
+                    color: white;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+
+// HOW TO SECTION
+.how_to_section {
+    .standart_card {
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+
+.personal_consultation_section {
+    background-color: #000;
+    .personal_wrapper {
+        display: flex;
+        width: 100%;
+        gap: 193px;
+
+        .personal_one {
+            display: flex;
+            width: 100%;
+            max-width: 560px;
+            flex-direction: column;
+            gap: 24px;
+
+            p {
+                color: white;
+            }
+            .personal_items_wrapper {
+                display: flex;
+                gap: 20px;
+
+                .personal_item {
+                    background-color: rgba(57, 57, 57, 1);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    width: 100%;
+                    max-width: 173px;
+                    height: 40px;
+                    border-radius: 8px;
+                    span {
+                        display: block;
+                        background: #000;
+                        color: transparent;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        background-image: var(--gold-gradient);
+                    }
+                }
+
+            }
+            .personal_details {
+                color: rgba(86, 86, 86, 1);
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) { 
+    h1 {
+        font-size: 64px;
+        text-transform: uppercase;
+      }
+      h2 {
+        font-size: 32px;
+      }
+      h3 {
+        font-size: 24px;
+      }
+
+      h4 {
+        font-size: 16px;
+      }
+    
+      .bold {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      .normal {
+        font-size: 16px;
+      }
+      .small {
+        font-size: 14px;
+      }
+      .little {
+        font-size: 14px;
+      }
+    
+}
