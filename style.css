@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Oswald";
   src: url("/fonts/Oswald-Regular.ttf") format("truetype");
@@ -26,19 +27,23 @@ h1 {
   font-size: 140px;
   line-height: 100%;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 h2 {
   font-size: 56px;
+  font-weight: 400;
 }
 
 h3 {
   font-size: 32px;
+  font-weight: 400;
 }
 
 h4 {
   font-size: 24px;
   line-height: 30px;
+  font-weight: 400;
 }
 
 .bold {
@@ -60,6 +65,7 @@ h4 {
 
 body {
   font-family: "Roboto";
+  position: relative;
 }
 
 :root {
@@ -242,10 +248,24 @@ body {
   width: 1240px;
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
 .hero_block {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: #000;
+  background-image: url(img/hero/HeroI2.png);
+  position: relative;
+}
+.hero_block .container {
+  flex-direction: row;
 }
 
 .hero_one {
@@ -270,9 +290,33 @@ body {
 }
 
 .hero_two {
+  background-image: url(img/hero/Ellipse.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.hero_two img {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.courses {
+  padding-top: 50px;
+  padding-bottom: 150px;
+  display: flex;
   width: 100%;
-  max-width: 661px;
-  height: 708px;
+  background-color: #000;
+  justify-content: center;
+}
+.courses .container {
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
 }
 
 .cards_component_wrapper {
@@ -307,23 +351,39 @@ body {
   color: white;
 }
 
+.blure1 {
+  position: absolute;
+  width: 100%;
+  top: 876px;
+  z-index: 0;
+}
+.blure1 img {
+  width: 100%;
+}
+
 .about_section {
   background-color: #000;
+  justify-content: center;
+  display: flex;
 }
 
 .about_wrapper {
   display: flex;
   gap: 87px;
+  position: relative;
 }
 .about_wrapper .about_text_block {
   width: 100%;
   max-width: 648px;
 }
+.about_wrapper .about_text_block h2 {
+  line-height: 70px;
+}
 .about_wrapper .about_text_block .pros_wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 27px;
-  padding-top: 59px;
+  padding-top: 56px;
   padding-bottom: 109px;
 }
 .about_wrapper .about_text_block .pros_wrapper .pros_block {
@@ -361,6 +421,8 @@ body {
 
 .info_section {
   background-color: #000;
+  display: flex;
+  justify-content: center;
 }
 .info_section .info_top {
   display: flex;
@@ -379,6 +441,7 @@ body {
   padding-top: 56px;
   display: flex;
   gap: 20px;
+  position: relative;
 }
 .info_section .info_bottom img {
   max-width: 610px;
@@ -397,14 +460,37 @@ body {
 }
 
 .bussinnes_section {
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
   background-color: #000;
+}
+.bussinnes_section .container {
+  align-items: center;
+}
+.bussinnes_section .accordion_item {
+  width: 1030px;
 }
 .bussinnes_section p {
   color: white;
 }
+.bussinnes_section .bussines_accordion_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 56px;
+}
 
 .tarif_section {
+  padding: 150px 0;
   background-color: #000;
+  display: flex;
+  justify-content: center;
+  background-image: url(img/Elipse.svg);
+}
+.tarif_section .container {
+  align-items: center;
+  justify-content: center;
 }
 .tarif_section .tarif_cards_wrapper {
   display: flex;
@@ -436,7 +522,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 44px;
-  padding-top: 32px;
+  padding-top: 6px;
   width: 100%;
   align-items: center;
 }
@@ -450,9 +536,47 @@ body {
   color: rgb(255, 255, 255);
   background: linear-gradient(198.78deg, #2A2A2A -1.46%, #3E3E3E 107.55%);
 }
+.tarif_section .tarif_cards_wrapper .tarif_standart_card ul {
+  list-style: none;
+}
+.tarif_section .tarif_cards_wrapper .tarif_standart_card ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+}
+.tarif_section .tarif_cards_wrapper .tarif_standart_card ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  background-image: url("img/decoration/golden_bullet.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .tarif_section .tarif_cards_wrapper .tarif_golden_card {
   color: var(--second);
   background: var(--gold-gradient);
+}
+.tarif_section .tarif_cards_wrapper .tarif_golden_card ul {
+  list-style: none;
+}
+.tarif_section .tarif_cards_wrapper .tarif_golden_card ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+}
+.tarif_section .tarif_cards_wrapper .tarif_golden_card ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  background-image: url("img/decoration/white_bullet.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .tarif_section .tarif_cards_wrapper .tarif_golden_card .normal {
   color: white;
@@ -510,6 +634,85 @@ body {
 }
 .personal_consultation_section .personal_wrapper .personal_one .personal_details {
   color: rgb(86, 86, 86);
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #000;
+  padding: 150px 0;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-content img {
+  display: inline-block;
+  height: auto; /* сохраняем пропорции */
+  max-width: none; /* отключаем ограничение ширины */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  } /* Сдвигаем на половину ширины контейнера */
+}
+.accordion_item summary div {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  color: white;
+}
+.accordion_item p {
+  padding-top: 24px;
+}
+.accordion_item summary::-webkit-details-marker, .accordion_item summary::marker {
+  content: "";
+  display: none;
+}
+
+details {
+  background: var(--black-gradient);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #2B2B2B 0%, #3B3B3B 100%);
+  padding: 24px;
+  width: 100%;
+  max-width: 1030px;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+summary::after {
+  content: "";
+  color: var(--gold-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  /* padding: 10px; */
+  background-image: url(img/off.svg);
+  border-radius: 8px;
+  height: 40px;
+  width: 40px;
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+[open] summary::after {
+  background-image: url(img/on.svg);
+}
+
+summary::-webkit-details-marker, summary::marker {
+  content: "";
+  display: none;
 }
 
 @media (max-width: 1024px) {
