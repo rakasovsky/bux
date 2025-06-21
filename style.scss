@@ -46,6 +46,7 @@
     font-size: 24px;
     line-height: 30px;
     font-weight: 400;
+    font-family: "Roboto";
   }
 
   .bold {
@@ -65,6 +66,7 @@
 body {
     font-family: "Roboto";
     position: relative;
+    background-color: #131313;
 }
 
 
@@ -176,7 +178,7 @@ body {
 }
 .combi {
     display: inline-block;
-    background: #000; 
+    // background: #000; 
     position: relative;
  
     
@@ -262,18 +264,21 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden; 
+ 
 }
 
 .hero_block {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
+    // background-color: #000;
     background-image: url(img/hero/HeroI2.png);
     position: relative;
+    // padding-top: 200px;
 
     .container {
         flex-direction: row;
+        align-items: center;
     }
 }
 .hero_one {
@@ -282,6 +287,11 @@ body {
     width: 100%;
     max-width: 609px;
     gap: 24px;
+    
+    .hero_img_mob {
+        display: none;
+    }
+
     h1 {
         background: var(--gold-gradient);
         -webkit-background-clip: text;
@@ -289,6 +299,8 @@ body {
     }
     p {
         color: white;
+        max-width: 483px;
+        font-family: "Oswald";
     }
     .hero_btns {
         padding-top: 32px;
@@ -308,6 +320,10 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; 
+
+    .hero_bottom {
+        display: none;
+    }
 }
 
 .hero_two img {
@@ -317,6 +333,17 @@ body {
     height: auto;
     object-fit: contain;
 }
+.hero_bottom {
+    transform: translateY(-38px);
+    position: relative;
+    z-index: 2;
+
+    img {
+        width: 100%;
+        height: 100px;
+    }
+   
+}
 
 
 // CARDS COMPONENT
@@ -325,7 +352,7 @@ body {
     padding-bottom: 150px;
     display: flex;
     width: 100%;
-    background-color: #000;
+    // background-color: #000;
     justify-content: center;
 
     .container {
@@ -340,7 +367,7 @@ body {
     justify-content: center;
     max-width: 1240px;
     gap: 20px;
-    background-color: #000;
+    // background-color: #000;
 }
 
 .standart_card {
@@ -383,7 +410,7 @@ body {
 
 // ABOUT SECTION
 .about_section {
-    background-color: #000;
+    // background-color: #000;
     justify-content: center;
     display: flex;
     // background-image: url(img/EllipseRight.png);
@@ -450,7 +477,7 @@ body {
 
 // INFO SECTION
 .info_section{
-    background-color: #000;
+    // background-color: #000;
     display: flex;
     justify-content: center;
     .info_top {
@@ -473,6 +500,7 @@ body {
         display: flex;
         gap: 20px;
         position: relative;
+        z-index: 3;
 
         img {
             max-width: 610px;
@@ -485,7 +513,7 @@ body {
             flex-direction: column;
             max-width: 610px;
             width: 100%;
-            gap: 20px;
+            gap: 17px;
 
             p {
                 color: white;
@@ -495,16 +523,33 @@ body {
 }
 
 
+
+// ALL COURSES
+.all_courses_wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: Black;
+    // height: 600px;
+    border-radius: 50vw 50vw 0 0;
+    padding-top: 256px;
+    margin-top: -156px;
+    position: relative;
+}
+
 // BUSSINES COURSE
 .bussinnes_section {
-    padding-top: 150px;
+    // padding-top: 150px;
     display: flex;
     justify-content: center;
-    background-color: #000;
+    // background-color: #000;
     
 
     .container {
         align-items: center;
+
+        h2 {
+            padding-bottom: 24px;
+        }
        
     }
 
@@ -520,6 +565,8 @@ body {
         flex-direction: column;
         gap: 20px;
         padding-top: 56px;
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -527,16 +574,43 @@ body {
 // Tarif Section
 
 .tarif_section {
-    padding: 150px 0;
+    width: 100%;
+    // padding: 150px 0;
     background-color: #000;
     display: flex;
+    flex-direction: column;
+    gap: 150px;
+    position: relative;
+    color: white;
     justify-content: center;
-    background-image: url(img/Elipse.svg);
+    align-items: center;
+    // background-image: url(img/Elipse.svg);
+    background-repeat: no-repeat;
+    overflow-x: clip;
 
+    .eclipce_bg {
+        position: absolute;
+        z-index: 1;
+        top: -190px;
+    }
 
     .container {
         align-items: center;
         justify-content: center;
+        position: relative;
+        z-index: 2;
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // gap: 24px;
+            padding-bottom: 56px;
+
+            h2 {
+                padding-bottom: 24px;
+            }
+        }
     }
 
     .tarif_cards_wrapper {
@@ -570,7 +644,7 @@ body {
                 display: flex;
                 flex-direction: column;
                 gap: 44px;
-                padding-top: 6px;
+                padding-top: 36px;
                 width: 100%;
                 align-items: center;
 
@@ -584,7 +658,10 @@ body {
         }
         .tarif_standart_card {
             color: rgba(255, 255, 255, 1);
-            background: linear-gradient(198.78deg, #2A2A2A -1.46%, #3E3E3E 107.55%);
+            background: linear-gradient(198.78deg, #2A2A2A -1.46%, #3E3E3E 107.55%), radial-gradient(circle at top left, #CF9F66,#946331);
+            border: double 1px transparent;
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
 
             ul {
                 list-style: none;
@@ -592,7 +669,12 @@ body {
                 li {
                     position: relative; 
                     padding-left: 22px; 
-                    margin-bottom: 8px; 
+                    // margin-bottom: 8px; 
+                  }
+
+                  .cons {
+                    text-decoration: line-through;
+                    color: rgba(109, 109, 109, 1);
                   }
 
                 li::before {
@@ -606,10 +688,28 @@ body {
                     background-size: contain; 
                     background-repeat: no-repeat;
                   }
+                li+.cons::before {
+                    background-image: url('img/standart_cons.svg');
+                }  
             }
         }
+
+
+        // Не рабочий метод градиентного бордера
+        // .tarif_standart_card::before {
+        //     content: "";
+        //     position: absolute;
+        //     background: linear-gradient(89.69deg, #CF9F66 5.29%, #FFDC9C 46.7%, #946331 98.34%);
+        //     top: -4px;
+        //     left: -2px;
+        //     right: -2px;
+        //     bottom: -2px;
+        //     z-index: -1;
+        //     border-radius: 16px;
+        // }
+
         .tarif_golden_card {
-            color: var(--second);
+            color: #191919;
             background: var(--gold-gradient);
 
 
@@ -619,7 +719,8 @@ body {
                 li {
                     position: relative; 
                     padding-left: 22px; 
-                    margin-bottom: 8px; 
+                    color: #191919;
+                    // margin-bottom: 8px; 
                   }
 
                 li::before {
@@ -633,6 +734,15 @@ body {
                     background-size: contain; 
                     background-repeat: no-repeat;
                   }
+
+                  .cons {
+                    text-decoration: line-through;
+                    color: white;
+                  }
+
+                  li+.cons::before {
+                    background-image: url('img/golden_cons.svg');
+                }  
             }
             .normal {
                 color: white;
@@ -649,8 +759,49 @@ body {
 }
 
 
+.bux_accordion_wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+
+
+    .bux_block_one {
+        max-width: 610px;
+    }
+    .bux_block_two {
+        max-width: 610px;
+    }
+
+    .bussines_accordion_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .accordion_item summary div span:first-child {
+        width: 106px;
+    }
+    .accordion_item summary div span:last-child {
+        max-width: 400px;
+    }
+}
+
 // HOW TO SECTION
 .how_to_section {
+    background-color: #131313;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    padding: 150px 0;
+
+    .cards_component_wrapper {
+        background: none;
+    }
+    .container {
+        gap: 56px;
+    }
     .standart_card {
         img {
             width: 32px;
@@ -661,12 +812,18 @@ body {
 
 
 .personal_consultation_section {
-    background-color: #000;
+    display: flex;
+    justify-content: center;
+    background-color: #131313;
+    background-image: url(img/personal/personal-pattern.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
     .personal_wrapper {
         display: flex;
         width: 100%;
         gap: 193px;
-
+        align-items: center;
         .personal_one {
             display: flex;
             width: 100%;
@@ -707,6 +864,27 @@ body {
             }
         }
     }
+    .personal_links {
+        display: flex;
+        gap: 12px;
+    }
+}
+
+// FAQ
+.faq_section {
+    display: flex;
+    justify-content: center;
+    padding: 150px 0;
+    text-align: center;
+
+
+
+    .bussines_accordion_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 40px;
+    }
 }
 
 
@@ -714,8 +892,7 @@ body {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-  
-    background-color: #000;
+    // background-color: #000;
     padding: 150px 0;
   }
   
@@ -736,9 +913,13 @@ body {
     100% { transform: translateX(-50%); } /* Сдвигаем на половину ширины контейнера */
   }
 
+
+
 // Accodrion
 .accordion_item {
     // background: linear-gradient(249.78deg, #2B2B2B 0%, #3B3B3B 100%);
+    display: flex;
+    justify-content: center;
     summary {
         div {
             display: flex;
@@ -834,4 +1015,105 @@ summary::-webkit-details-marker,  summary::marker {
         font-size: 14px;
       }
     
+      .container {
+        width: 830px;
+    }
+
+    .btn  {
+        font-size: 18px;
+    }
+
+    .hero_block {
+        .container {
+            position: relative;
+            justify-content: center;
+        }
+
+        .hero_img_mob {
+            display: flex;
+            flex-direction: column;
+            transform: translateY(-70px);
+        }
+      
+        .hero_one {
+            align-items: center;
+
+            p {
+                transform: translateY(-70px);
+                text-align: center;
+            }
+
+            .hero_btns {
+                transform: translateY(-70px);
+                flex-direction: column;
+                padding-top: 0px;
+                gap: 12px;
+                width: 100%;
+                align-items: center;
+            }
+        }
+        .hero_two {
+          display: none;
+        }
+
+    }
+    .hero_bottom {
+        display: none;
+    }
+
+    .about_wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        .about_text_block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .pros_wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 27px;
+                padding-top: 56px;
+                padding-bottom: 32px;
+            }
+            .about_btn_wrapper {
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+                padding-top: 32px;
+            }
+        }
+    }
+
+    .info_section .info_bottom {
+        padding-top: 32px;
+        gap: 32px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info_section .info_bottom .info_text_wrapper {
+        gap: 12px;
+    }
+
+    .bussinnes_section .accordion_item {
+        width: 615px;
+    }
+    .courses {
+        padding-top: 0px;
+        padding-bottom: 100px;
+    }
+    .marquee {
+        padding: 100px 0;
+    }
+    .personal_consultation_section .personal_wrapper {
+        flex-direction: column;
+    }  
+    .how_to_section {
+        padding: 100px 0;
+    }  
+      
+}
+
+@media (max-width: 900px) { 
+
 }
