@@ -518,6 +518,8 @@ body {
 
 .tarif_section {
   width: 100%;
+  padding-top: 150px;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   gap: 150px;
@@ -531,7 +533,7 @@ body {
 .tarif_section .eclipce_bg {
   position: absolute;
   z-index: 1;
-  top: -190px;
+  top: -35px;
 }
 .tarif_section .container {
   align-items: center;
@@ -551,8 +553,6 @@ body {
 .tarif_section .slider-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
 }
 .tarif_section .tarif_cards_wrapper {
   display: flex;
@@ -704,6 +704,7 @@ body {
   border-radius: 50%;
   background: linear-gradient(180deg, #2B2B2B 0%, #3B3B3B 100%);
   cursor: pointer;
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
 }
 
 .slider-dot.active {
@@ -743,7 +744,8 @@ body {
   justify-content: center;
   position: relative;
   z-index: 0;
-  padding-bottom: 150px;
+  text-align: center;
+  padding: 150px 0;
 }
 .how_to_section .cards_component_wrapper {
   background: none;
@@ -1060,11 +1062,6 @@ summary::-webkit-details-marker, summary::marker {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .tarif_card {
-    width: calc(100% - 110px);
-    max-width: none;
-    scroll-snap-align: center;
-  }
   .slider-nav {
     display: flex;
   }
@@ -1142,7 +1139,12 @@ summary::-webkit-details-marker, summary::marker {
     background-size: cover;
   }
   .tarif_section .tarif_cards_wrapper .tarif_card {
-    width: 100%;
-    max-width: 340px;
+    width: calc(100% - 110px);
+    max-width: none;
+    scroll-snap-align: center;
+  }
+  .morecards .tarif_card {
+    max-width: calc(100vw - 40px);
+    scroll-snap-align: center;
   }
 }/*# sourceMappingURL=style.css.map */
