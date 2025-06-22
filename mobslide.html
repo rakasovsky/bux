@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="www">
+    <div class="slider-container">
       <div class="tarif_cards_wrapper">
         <!-- 1 -->
         <div class="tarif_card tarif_standart_card">
@@ -103,6 +103,99 @@
       </div>
     </div>
 
+    <div class="slider-container">
+      <div class="tarif_cards_wrapper">
+        <!-- 1 -->
+        <div class="tarif_card tarif_standart_card">
+          <div class="tarif_card_top">
+            <p class="normal gold_text">Тариф</p>
+            <h3>"Стандарт"</h3>
+          </div>
+          <p class="little">Для тих хто хоче розуміти всі процеси в бізнесі</p>
+          <div class="tarif_card_center">
+            <ul>
+              <li>8 онлайн зустрічей</li>
+              <li>
+                Практичні приклади звітності, договорів, нарахування заробітної
+                плати
+              </li>
+              <li>Практичні приклади управлінської звітності</li>
+              <li>Домашні завданя</li>
+              <li>Практичні відповіді на питання</li>
+              <li>Персональні 2 консультації з Євгенією Колісниик</li>
+            </ul>
+          </div>
+          <div class="tarif_card_bottom">
+            <div>
+              <h4 class="gold_text">Вартість</h4>
+              <h3>4000 грн</h3>
+            </div>
+            <a href="/" class="golden btn"> Придбати </a>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="tarif_card tarif_golden_card">
+          <div class="tarif_card_top">
+            <p class="normal">Тариф</p>
+            <h3>"Бізнес"</h3>
+          </div>
+          <p class="little">Для тих хто хоче розуміти всі процеси в бізнесі</p>
+          <div class="tarif_card_center">
+            <ul>
+              <li>8 онлайн зустрічей</li>
+              <li>
+                Практичні приклади звітності, договорів, нарахування заробітної
+                плати
+              </li>
+              <li>Практичні приклади управлінської звітності</li>
+              <li>Домашні завданя</li>
+              <li>Практичні відповіді на питання</li>
+              <li>Персональні 2 консультації з Євгенією Колісниик</li>
+            </ul>
+          </div>
+          <div class="tarif_card_bottom">
+            <div>
+              <h4>Вартість</h4>
+              <h3>8000 грн</h3>
+            </div>
+            <a href="/" class="matte btn"> Придбати </a>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="tarif_card tarif_golden_card">
+          <div class="tarif_card_top">
+            <p class="normal">Тариф</p>
+            <h3>"Бізнес"</h3>
+          </div>
+          <p class="little">Для тих хто хоче розуміти всі процеси в бізнесі</p>
+          <div class="tarif_card_center">
+            <ul>
+              <li>8 онлайн зустрічей</li>
+              <li>
+                Практичні приклади звітності, договорів, нарахування заробітної
+                плати
+              </li>
+              <li>Практичні приклади управлінської звітності</li>
+              <li>Домашні завданя</li>
+              <li>Практичні відповіді на питання</li>
+              <li>Персональні 2 консультації з Євгенією Колісниик</li>
+            </ul>
+          </div>
+          <div class="tarif_card_bottom">
+            <div>
+              <h4>Вартість</h4>
+              <h3>8000 грн</h3>
+            </div>
+            <a href="/" class="matte btn"> Придбати </a>
+          </div>
+        </div>
+      </div>
+      <!-- Навигация слайдера -->
+      <div class="slider-dots"></div>
+    </div>
+
     <style>
 
 :root {
@@ -117,7 +210,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
-      .www {
+      .slider-container {
         display: flex;
         flex-direction: column;
       }
@@ -127,6 +220,11 @@
         gap: 20px;
         position: relative;
         overflow: hidden;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        scrollbar-width: none; /* Для Firefox */
+        -ms-overflow-style: none; /* Для IE */
       }
 
       .tarif_card {
@@ -302,57 +400,62 @@
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const slider = document.querySelector(".tarif_cards_wrapper");
-        const cards = document.querySelectorAll(".tarif_card");
-        const prevBtn = document.querySelector(".slider-prev");
-        const nextBtn = document.querySelector(".slider-next");
-        const dotsContainer = document.querySelector(".slider-dots");
+  const sliders = document.querySelectorAll(".slider-container"); // Ищем контейнеры слайдеров
 
-        // Создаем точки навигации
-        cards.forEach((_, index) => {
-          const dot = document.createElement("div");
-          dot.classList.add("slider-dot");
-          if (index === 0) dot.classList.add("active");
-          dot.addEventListener("click", () => {
-            goToSlide(index);
-          });
-          dotsContainer.appendChild(dot);
-        });
+  sliders.forEach((slider) => {
+    const cardsWrapper = slider.querySelector(".tarif_cards_wrapper");
+    const cards = slider.querySelectorAll(".tarif_card");
+    const dotsContainer = slider.querySelector(".slider-dots"); // Теперь ищем внутри .slider-container
 
-        const dots = document.querySelectorAll(".slider-dot");
+    if (!dotsContainer) {
+      console.warn("Элемент .slider-dots не найден в слайдере:", slider);
+      return;
+    }
 
-        let currentIndex = 0;
+    let currentIndex = 0;
 
-        function updateSlider() {
-          slider.scrollTo({
-            left:
-              cards[currentIndex].offsetLeft -
-              (slider.offsetWidth - cards[currentIndex].offsetWidth) / 2,
-            behavior: "smooth",
-          });
+    // Очищаем старые точки (если они есть)
+    dotsContainer.innerHTML = "";
 
-          dots.forEach((dot, index) => {
-            dot.classList.toggle("active", index === currentIndex);
-          });
-        }
+    // Создаем точки
+    cards.forEach((_, index) => {
+      const dot = document.createElement("div");
+      dot.classList.add("slider-dot");
+      if (index === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
 
-        function goToSlide(index) {
-          currentIndex = index;
-          updateSlider();
-        }
+    const dots = dotsContainer.querySelectorAll(".slider-dot");
 
-        prevBtn.addEventListener("click", () => {
-          currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-          updateSlider();
-        });
+    function updateSlider() {
+      if (!cards[currentIndex]) return;
 
-        nextBtn.addEventListener("click", () => {
-          currentIndex = (currentIndex + 1) % cards.length;
-          updateSlider();
-        });
-
-        window.addEventListener("resize", updateSlider);
+      cardsWrapper.scrollTo({
+        left: cards[currentIndex].offsetLeft - (cardsWrapper.offsetWidth - cards[currentIndex].offsetWidth) / 2,
+        behavior: "smooth",
       });
+
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle("active", idx === currentIndex);
+      });
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateSlider();
+    }
+
+    // Обновляем при ресайзе
+    const resizeHandler = () => updateSlider();
+    window.addEventListener("resize", resizeHandler);
+
+    // Очистка (если слайдер удаляется из DOM)
+    slider._cleanup = () => {
+      window.removeEventListener("resize", resizeHandler);
+    };
+  });
+});
     </script>
   </body>
 </html>

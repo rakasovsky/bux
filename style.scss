@@ -572,11 +572,15 @@ body {
 
 
 // Tarif Section
-
+.testtar {
+    background-color: black;
+    border-radius: 0% 0% 2% 2%;
+    padding-bottom: 100px;
+}
 .tarif_section {
     width: 100%;
     // padding: 150px 0;
-    background-color: #000;
+    // background-color: #000;
     display: flex;
     flex-direction: column;
     gap: 150px;
@@ -613,10 +617,24 @@ body {
         }
     }
 
+    .slider-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
     .tarif_cards_wrapper {
         display: flex;
         padding-top: 56px;
         gap: 20px;
+        position: relative;
+        overflow: hidden;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        scrollbar-width: none; /* Для Firefox */
+        -ms-overflow-style: none; /* Для IE */
 
         .tarif_card {
             width: 100%;
@@ -628,6 +646,8 @@ body {
             gap: 32px;
             padding: 40px;
             border-radius: 16px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
 
             .tarif_card_top {
                 display: flex;
@@ -756,7 +776,48 @@ body {
             }
         }
     }
+    .morecards {
+        .tarif_card {
+            max-width: 400px;
+        }
+    }
 }
+.slider-nav {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .slider-prev,
+  .slider-next {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #cf9f66;
+  }
+
+  .slider-dots {
+    display: flex;
+    gap: 10px;
+  }
+
+  .slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #2B2B2B 0%, #3B3B3B 100%);
+    cursor: pointer;
+  }
+
+  .slider-dot.active {
+    background: #cf9f66;
+    width: 24px;
+    height: 12px;
+    border-radius: 10px;
+  }
 
 
 .bux_accordion_wrapper {
@@ -794,7 +855,8 @@ body {
     justify-content: center;
     position: relative;
     z-index: 0;
-    padding: 150px 0;
+    // padding: 150px 0;
+    padding-bottom: 150px;
 
     .cards_component_wrapper {
         background: none;
@@ -877,7 +939,14 @@ body {
     padding: 150px 0;
     text-align: center;
 
-
+    .faq_accordion_wrapper {
+        details {
+            p {
+                color: white;
+                text-align: left;
+            }
+        }
+    }
 
     .bussines_accordion_wrapper {
         display: flex;
@@ -1038,6 +1107,9 @@ summary::-webkit-details-marker,  summary::marker {
         .hero_one {
             align-items: center;
 
+            h1 {
+                text-align: center;
+            }
             p {
                 transform: translateY(-70px);
                 text-align: center;
@@ -1060,7 +1132,11 @@ summary::-webkit-details-marker,  summary::marker {
     .hero_bottom {
         display: none;
     }
-
+    .hero_img_mob {
+        img {
+            width: 100%;
+        }
+    }
     .about_wrapper {
         flex-direction: column;
         align-items: center;
@@ -1111,9 +1187,142 @@ summary::-webkit-details-marker,  summary::marker {
     .how_to_section {
         padding: 100px 0;
     }  
+
+    .tarif_section .tarif_cards_wrapper .tarif_card {
+        height: auto;
+    }
       
 }
 
 @media (max-width: 900px) { 
+    .btn {
+        max-width: 100%;
+    }
+    .standart_card {
+        height: 200px;
+        padding: 40px 24px;
+        gap: 12px;
+    }
+    .tarif_section {
+        gap: 100px;
+    }    
 
+    .info_section .info_bottom img {
+        max-width: 610px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .tarif_cards_wrapper {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 60px;
+        gap: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .tarif_card {
+        width: calc(100% - 110px);
+        max-width: none;
+        scroll-snap-align: center;
+      }
+
+      .slider-nav {
+        display: flex;
+      }
+      .moved {
+        img {
+            width: 100%;
+        }
+      }
+      .insta_btn {
+        max-width: 100%;
+      }
+      .bussinnes_section .accordion_item {
+        width: 100%;
+        }
+      details {
+        max-width: 100%;
+        padding: 12px;
+      }
+      summary {
+        align-items: center;
+    }
+    .personal_two {
+        img{
+            width: 100%;
+        }
+    }
+    .personal_consultation_section .personal_wrapper .personal_one .personal_items_wrapper {
+        flex-direction: column;
+    }    
+    .personal_consultation_section .personal_wrapper .personal_one .personal_items_wrapper .personal_item {
+        max-width: 100%;
+    }
+    .personal_consultation_section .personal_links{
+    flex-direction: column;
+    }
+    .faq_section {
+        padding: 100px 0;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        width: 700px;
+    }
+    // .tarif_section .tarif_cards_wrapper .tarif_card {
+    //     width: calc(100% - 110px);
+    //     max-width: none;
+    //     scroll-snap-align: center;
+    // }
+}
+@media (max-width: 500px) {
+    .container {
+        max-width: 343px;
+    }
+    .about_wrapper .about_text_block .pros_wrapper .pros_block .pros_item {
+        max-width: 100%;
+    }
+    .accordion_item summary div {
+        flex-direction: column;
+        gap: 4px;
+        align-items: self-start;
+        color: white;
+    }
+    summary div span:last-child{
+        font-size: 14px;
+        max-width: 292px;
+        text-align: left;
+    }
+    .info_section .info_top {
+        text-align: center;
+    }
+    .tarif_section .container .heading {
+        text-align: center;
+    }
+    .bussinnes_section .container h2 {
+        text-align: center;
+    }
+    .bux_accordion_wrapper .accordion_item summary div span:last-child {
+        max-width: 287px;
+    }
+    .personal_consultation_section .personal_wrapper {
+        gap: 23px;
+    }
+    .personal_consultation_section {
+        background-size: cover;
+    }
+    // .tarif_section .tarif_cards_wrapper .tarif_card {
+    //     width: 100%;
+    //     max-width: 350px;
+    // }
+    .tarif_section .tarif_cards_wrapper .tarif_card {
+        width: 100%;
+        max-width: 340px;
+    }
+    
 }
