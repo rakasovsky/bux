@@ -563,8 +563,8 @@ body {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 16px;
-  scrollbar-width: none; /* Для Firefox */
-  -ms-overflow-style: none; /* Для IE */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .tarif_section .tarif_cards_wrapper .tarif_card {
   width: 100%;
@@ -602,6 +602,9 @@ body {
 }
 .tarif_section .tarif_cards_wrapper .tarif_card .tarif_card_bottom div {
   text-align: center;
+}
+.tarif_section .tarif_cards_wrapper .tarif_card .tarif_card_bottom .btn {
+  max-width: 100%;
 }
 .tarif_section .tarif_cards_wrapper .tarif_standart_card {
   color: rgb(255, 255, 255);
@@ -764,8 +767,8 @@ body {
   background-color: #131313;
   background-image: url(img/personal/personal-pattern.svg);
   background-repeat: no-repeat;
-  background-position-y: bottom;
-  background-position-x: center;
+  background-size: cover;
+  background-position: 0 50px;
 }
 .personal_consultation_section .personal_wrapper {
   display: flex;
@@ -901,6 +904,7 @@ summary::after {
   border-radius: 8px;
   height: 40px;
   width: 40px;
+  cursor: pointer;
   transition: opacity 300ms ease-out, transform 300ms ease-out;
 }
 
@@ -978,6 +982,18 @@ summary::-webkit-details-marker, summary::marker {
   }
   .hero_bottom {
     display: none;
+  }
+  .hero_bottom2 {
+    transform: translateY(-13px);
+    position: relative;
+    z-index: 2;
+    height: 1px;
+  }
+  .hero_img_mob {
+    background-image: url(img/hero/Ellipse.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
   .hero_img_mob img {
     width: 100%;
@@ -1062,6 +1078,11 @@ summary::-webkit-details-marker, summary::marker {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .tarif_card {
+    width: calc(100% - 110px);
+    max-width: none;
+    scroll-snap-align: center;
+  }
   .slider-nav {
     display: flex;
   }
@@ -1101,6 +1122,10 @@ summary::-webkit-details-marker, summary::marker {
   .container {
     width: 700px;
   }
+  .tarif_section .tarif_cards_wrapper .tarif_card {
+    width: calc(100% - 60px);
+    scroll-snap-align: center;
+  }
 }
 @media (max-width: 500px) {
   .container {
@@ -1139,12 +1164,12 @@ summary::-webkit-details-marker, summary::marker {
     background-size: cover;
   }
   .tarif_section .tarif_cards_wrapper .tarif_card {
-    width: calc(100% - 110px);
-    max-width: none;
+    width: calc(100% - 44px);
     scroll-snap-align: center;
   }
   .morecards .tarif_card {
-    max-width: calc(100vw - 40px);
+    max-width: 320px;
+    width: 343px;
     scroll-snap-align: center;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -22,7 +22,7 @@
 
             <div class="hero_img_mob">
               <img src="/img/hero/Hero1.png" alt="" />
-              <div class="hero_bottom">
+              <div class="hero_bottom2">
                 <img src="img/hero/herobot.png" alt="">
               </div>
             </div>
@@ -747,7 +747,7 @@
     </section>
 
     <!-- Buttons -->
-    <div class="buttons">
+    <!-- <div class="buttons">
       <a href="/" class="golden btn"> Button </a>
       <a href="/" class="matte btn"> Button </a>
       <a href="/" class="combi btn">
@@ -757,10 +757,10 @@
       <a href="http://" class="insta_btn">
         <span>Button</span>
       </a>
-    </div>
+    </div> -->
 
     <!-- ACCORDION -->
-    <div class="accordion_item">
+    <!-- <div class="accordion_item">
       <details>
         <summary>
           <div>
@@ -770,7 +770,7 @@
         <p>uuoiuoiuoiuoioiuoiuoi</p>
       </details>
     
-    </div>
+    </div> -->
   </body>
 
   <script>
@@ -820,9 +820,9 @@
     }
 
     let currentIndex = 0;
-    let isScrolling = false; // Флаг, чтобы избежать конфликтов при программной прокрутке
+    let isScrolling = false; 
 
-    // Очищаем и создаем точки
+   
     dotsContainer.innerHTML = "";
     cards.forEach((_, index) => {
       const dot = document.createElement("div");
@@ -834,7 +834,7 @@
 
     const dots = dotsContainer.querySelectorAll(".slider-dot");
 
-    // Функция обновления активной точки
+
     function updateActiveDot(index) {
       dots.forEach((dot, idx) => {
         dot.classList.toggle("active", idx === index);
@@ -842,7 +842,7 @@
       currentIndex = index;
     }
 
-    // Плавная прокрутка к выбранной карточке
+   
     function goToSlide(index) {
       isScrolling = true;
       currentIndex = index;
@@ -851,12 +851,12 @@
         behavior: "smooth",
       });
       updateActiveDot(index);
-      setTimeout(() => (isScrolling = false), 500); // Снимаем блокировку после прокрутки
+      setTimeout(() => (isScrolling = false), 500); 
     }
 
-    // Определяем, какая карточка сейчас в центре
+   
     function updateCurrentSlide() {
-      if (isScrolling) return; // Игнорируем, если скролл программный
+      if (isScrolling) return; 
 
       const wrapperRect = cardsWrapper.getBoundingClientRect();
       const wrapperCenter = wrapperRect.left + wrapperRect.width / 2;
@@ -865,23 +865,21 @@
         const cardRect = card.getBoundingClientRect();
         const cardCenter = cardRect.left + cardRect.width / 2;
 
-        // Если центр карточки ближе всего к центру слайдера
         if (Math.abs(cardCenter - wrapperCenter) < wrapperRect.width / 4) {
           updateActiveDot(index);
         }
       });
     }
 
-    // Следим за прокруткой
     cardsWrapper.addEventListener("scroll", updateCurrentSlide);
 
-    // Обновляем при ресайзе
+  
     const resizeHandler = () => {
-      goToSlide(currentIndex); // Возвращаем текущий слайд в центр
+      goToSlide(currentIndex); 
     };
     window.addEventListener("resize", resizeHandler);
 
-    // Очистка
+
     slider._cleanup = () => {
       window.removeEventListener("resize", resizeHandler);
       cardsWrapper.removeEventListener("scroll", updateCurrentSlide);

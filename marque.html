@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="scrolling-background"></div>
+    <div class="parallax-container">
+      <div class="layer layer-back"></div>
+      <div class="layer layer-front"></div>
+    </div>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .scrolling-background {
+        height: 10vh;
+        background-image: url("img/Frame423.png");
+        background-size: cover;
+        background-repeat: repeat-x; /* Horizontal repeat */
+        animation: scroll 10s linear infinite; /* Infinite loop */
+      }
+
+      @keyframes scroll {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -100% 0;
+        }
+      }
+
+      .parallax-container {
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+      }
+
+      .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 200%; /* Double the width for smoother looping */
+      }
+
+      .layer-back {
+        background: url("img/runningline.svg") repeat-x;
+        background-size: cover;
+        z-index: 1;
+        animation: scroll-back 20s linear infinite;
+      }
+
+      .layer-front {
+        background: url("img/runningline.svg") repeat-x;
+        background-size: cover;
+        z-index: 2;
+        animation: scroll-front 10s linear infinite;
+      }
+
+      @keyframes scroll-back {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -100% 0;
+        }
+      }
+
+      @keyframes scroll-front {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -100% 0;
+        }
+      }
+    </style>
+  </body>
+</html>
