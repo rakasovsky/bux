@@ -535,6 +535,9 @@ body {
   z-index: 1;
   top: -35px;
 }
+.tarif_section .eclipce_mob {
+  display: none;
+}
 .tarif_section .container {
   align-items: center;
   justify-content: center;
@@ -1166,10 +1169,30 @@ summary::-webkit-details-marker, summary::marker {
   .tarif_section .tarif_cards_wrapper .tarif_card {
     width: calc(100% - 44px);
     scroll-snap-align: center;
+    padding: 20px;
+    gap: 24px;
+  }
+  .tarif_section .tarif_cards_wrapper .tarif_card .tarif_card_bottom {
+    gap: 32px;
+    padding-top: 36px;
+  }
+  .tarif_section .tarif_cards_wrapper .tarif_standart_card ul {
+    font-size: 14px;
+    gap: 12px;
+  }
+  .tarif_section .tarif_cards_wrapper .tarif_golden_card ul {
+    font-size: 14px;
+    gap: 12px;
   }
   .morecards .tarif_card {
     max-width: 320px;
     width: 343px;
     scroll-snap-align: center;
+  }
+  .tarif_section .eclipce_desk {
+    display: none;
+  }
+  .tarif_section .eclipce_mob {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
