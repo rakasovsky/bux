@@ -76,7 +76,7 @@ body {
     --second: #191919
     --black-gradient: linear-gradient(180deg, #2B2B2B 0%, #3B3B3B 100%);
 
-  }
+}
 
 .gold_text {
     background: var(--gold-gradient);
@@ -572,246 +572,504 @@ body {
 
 
 // Tarif Section
-.testtar {
+
+
+// .twocards-block {
+//     .tarif_cards_wrapper {
+//         .tarif_card {
+//             max-width: 505px!important;
+//             width: 100%;
+//         }
+//     }
+// }
+
+// .testtar {
+//     background-color: black;
+//     border-radius: 0% 0% 2% 2%;
+//     padding-bottom: 100px;
+// }
+
+
+
+// .tarif_section {
+//     width: 100%;
+//     padding-top: 150px;
+//     background-color: #000;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 150px;
+//     position: relative;
+//     color: white;
+//     justify-content: center;
+//     align-items: center;
+//     background-repeat: no-repeat;
+//     overflow-x: clip;
+
+//     .eclipce_bg {
+//         position: absolute;
+//         z-index: 1;
+//         top: -35px;
+//     }
+
+//     .eclipce_mob {
+//         display: none;
+//     }
+
+
+//     .container {
+//         align-items: center;
+//         justify-content: center;
+//         position: relative;
+//         z-index: 2;
+
+//         .heading {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             padding-bottom: 56px;
+
+//             h2 {
+//                 padding-bottom: 24px;
+//             }
+//         }
+//     }
+
+//     .slider-container {
+//         display: flex;
+//         flex-direction: column;
+//     }
+
+//     .tarif_cards_wrapper {
+//         display: flex;
+//         padding-top: 56px;
+//         gap: 20px;
+//         position: relative;
+//         overflow: hidden;
+//         overflow-x: auto;
+//         scroll-snap-type: x mandatory;
+//         gap: 16px;
+//         scrollbar-width: none;
+//         -ms-overflow-style: none; 
+       
+//         .tarif_card {
+//             width: 100%;
+//             max-width: 400px;
+//             height: 700px;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             gap: 32px;
+//             padding: 40px;
+//             border-radius: 16px;
+//             flex-shrink: 0;
+//             scroll-snap-align: start;
+
+//             .tarif_card_top {
+//                 display: flex;
+//                 flex-direction: column;
+//                 align-items: center;
+//             }
+
+//             ul {
+//                 display: flex;
+//                 flex-direction: column;
+//                 gap: 16px;
+//             }
+//             .tarif_card_bottom {
+//                 display: flex;
+//                 flex-direction: column;
+//                 gap: 44px;
+//                 padding-top: 36px;
+//                 width: 100%;
+//                 align-items: center;
+
+//                 h4 {
+//                     font-weight: 400;
+//                 }
+//                 div {
+//                     text-align: center;
+//                 }
+//                 .btn {
+//                     max-width: 100%;
+//                 }
+//             }
+//         }
+//         .tarif_standart_card {
+//             color: rgba(255, 255, 255, 1);
+//             background: linear-gradient(198.78deg, #2A2A2A -1.46%, #3E3E3E 107.55%), radial-gradient(circle at top left, #CF9F66,#946331);
+//             border: double 1px transparent;
+//             background-origin: border-box;
+//             background-clip: padding-box, border-box;
+
+//             ul {
+//                 list-style: none;
+
+//                 li {
+//                     position: relative; 
+//                     padding-left: 22px; 
+//                   }
+
+//                   .cons {
+//                     text-decoration: line-through;
+//                     color: rgba(109, 109, 109, 1);
+//                   }
+
+//                 li::before {
+//                     content: ""; 
+//                     position: absolute;
+//                     left: 0;
+//                     top: 0px; 
+//                     width: 16px; 
+//                     height: 16px; 
+//                     background-image: url('img/decoration/golden_bullet.svg');
+//                     background-size: contain; 
+//                     background-repeat: no-repeat;
+//                   }
+//                 li+.cons::before {
+//                     background-image: url('img/standart_cons.svg');
+//                 }  
+//             }
+//         }
+
+//         .tarif_golden_card {
+//             color: #191919;
+//             background: var(--gold-gradient);
+
+
+//             ul {
+//                 list-style: none;
+
+//                 li {
+//                     position: relative; 
+//                     padding-left: 22px; 
+//                     color: #191919;
+//                   }
+
+//                 li::before {
+//                     content: ""; 
+//                     position: absolute;
+//                     left: 0;
+//                     top: 0px; 
+//                     width: 16px; 
+//                     height: 16px; 
+//                     background-image: url('img/decoration/white_bullet.svg');
+//                     background-size: contain; 
+//                     background-repeat: no-repeat;
+//                   }
+
+//                   .cons {
+//                     text-decoration: line-through;
+//                     color: white;
+//                   }
+
+//                   li+.cons::before {
+//                     background-image: url('img/golden_cons.svg');
+//                 }  
+//             }
+//             .normal {
+//                 color: white;
+//             }
+
+//             .tarif_card_bottom {
+//                 h4 {
+//                     color: white;
+//                     font-weight: 400;
+//                 }
+//             }
+//         }
+//     }
+// }
+// .slider-nav {
+//     display: none;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 20px;
+//     padding: 20px 0;
+//   }
+
+//   .slider-prev,
+//   .slider-next {
+//     background: none;
+//     border: none;
+//     font-size: 24px;
+//     cursor: pointer;
+//     color: #cf9f66;
+//   }
+
+//   .slider-dots {
+//     display: flex;
+//     gap: 10px;
+//   }
+
+
+// .slider-dot {
+//     width: 12px;
+//     height: 12px;
+//     border-radius: 50%;
+//     background: linear-gradient(180deg, #2B2B2B 0%, #3B3B3B 100%);
+//     cursor: pointer;
+//     transition: 
+//       width 0.3s ease,
+//       height 0.3s ease,
+//       background 0.3s ease,
+//       border-radius 0.3s ease; 
+//   }
+  
+//   .slider-dot.active {
+//     background: #cf9f66; 
+//     width: 24px; 
+//     height: 12px; 
+//     border-radius: 10px; 
+//   }
+
+.eclipce_bg {
+    position: absolute;
+    z-index: 1;
+    top: -35px;
+}
+.eclipce_mob {
+    display: none;
+}
+
+.tarif_section {
+  display: flex;
+  padding-top: 150px;
+  flex-direction: column;
+  background-color: #000;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tarif_section .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+// .tarif_section .container:last-child {
+//     padding-top: 150px;
+//     gap: 56px;
+
+//     h2 {
+//         padding-bottom: 24px;
+//     }
+// }
+.slider-container {
+  display: flex;
+  flex-direction: column;
+}
+.tarif_cards_wrapper {
+  display: flex;
+  padding-top: 56px;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  scrollbar-width: none; /* Для Firefox */
+  -ms-overflow-style: none; /* Для IE */
+}
+
+.progwrapper {
+     padding-top: 150px;
+        gap: 56px;
+
+        h2 {
+       padding-bottom: 24px;
+     }
+    h2, p {
+        max-width: 918px;
+        text-align: center;
+    }
+    .bux_accordion_wrapper {
+        justify-content: center;
+    }
+
+}
+.twocards .tarif_card {
+    width: 505px;
+}
+.tarif_card {
+  width: 400px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 40px;
+  border-radius: 16px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.tarif_card_top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tarif_card_bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  padding-top: 36px;
+  width: 100%;
+  align-items: center;
+}
+
+.tarif_card_bottom h4 {
+  font-weight: 400;
+}
+
+.tarif_card_bottom div {
+  text-align: center;
+}
+
+.tarif_standart_card {
+  color: rgba(255, 255, 255, 1);
+  background: linear-gradient(198.78deg, #2a2a2a -1.46%, #3e3e3e 107.55%),
+    radial-gradient(circle at top left, #cf9f66, #946331);
+  border: double 1px transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.tarif_standart_card ul {
+  list-style: none;
+}
+
+.tarif_standart_card li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.tarif_standart_card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  background-image: url("img/decoration/golden_bullet.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tarif_golden_card {
+  color: var(--second);
+  background: var(--gold-gradient);
+}
+
+.tarif_golden_card ul {
+  list-style: none;
+}
+
+.tarif_golden_card li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.tarif_golden_card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  background-image: url("img/decoration/white_bullet.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tarif_section .tarif_cards_wrapper .tarif_standart_card ul .cons {
+    color: rgb(109, 109, 109);
+    text-decoration: line-through;
+}
+.tarif_section .tarif_cards_wrapper .tarif_standart_card ul li + .cons::before {
+    background-image: url(img/standart_cons.svg);
+}
+
+.tarif_section .tarif_cards_wrapper .tarif_golden_card ul .cons {
+    text-decoration: line-through;
+    color: white;
+}
+.tarif_section .tarif_cards_wrapper .tarif_golden_card ul li + .cons::before{
+    background-image: url(img/golden_cons.svg);
+}
+
+.tarif_golden_card .normal {
+  color: white;
+}
+
+.tarif_golden_card .tarif_card_bottom h4 {
+  color: white;
+  font-weight: 400;
+}
+
+.tarif_golden_card li .cons {
+  text-decoration: line-through;
+  color: white;
+}
+
+.tarif_golden_card li + .cons::before {
+  background-image: url("img/golden_cons.svg");
+}
+
+.last {
     background-color: black;
     border-radius: 0% 0% 2% 2%;
     padding-bottom: 100px;
 }
-.tarif_section {
-    width: 100%;
-    padding-top: 150px;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    gap: 150px;
-    position: relative;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    overflow-x: clip;
 
-    .eclipce_bg {
-        position: absolute;
-        z-index: 1;
-        top: -35px;
-    }
-
-    .eclipce_mob {
-        display: none;
-    }
-
-
-    .container {
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        z-index: 2;
-
-        .heading {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 56px;
-
-            h2 {
-                padding-bottom: 24px;
-            }
-        }
-    }
-
-    .slider-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .tarif_cards_wrapper {
-        display: flex;
-        padding-top: 56px;
-        gap: 20px;
-        position: relative;
-        overflow: hidden;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 16px;
-        scrollbar-width: none;
-        -ms-overflow-style: none; 
-
-        .tarif_card {
-            width: 100%;
-            max-width: 505px;
-            height: 700px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 32px;
-            padding: 40px;
-            border-radius: 16px;
-            flex-shrink: 0;
-            scroll-snap-align: start;
-
-            .tarif_card_top {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            ul {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-            }
-            .tarif_card_bottom {
-                display: flex;
-                flex-direction: column;
-                gap: 44px;
-                padding-top: 36px;
-                width: 100%;
-                align-items: center;
-
-                h4 {
-                    font-weight: 400;
-                }
-                div {
-                    text-align: center;
-                }
-                .btn {
-                    max-width: 100%;
-                }
-            }
-        }
-        .tarif_standart_card {
-            color: rgba(255, 255, 255, 1);
-            background: linear-gradient(198.78deg, #2A2A2A -1.46%, #3E3E3E 107.55%), radial-gradient(circle at top left, #CF9F66,#946331);
-            border: double 1px transparent;
-            background-origin: border-box;
-            background-clip: padding-box, border-box;
-
-            ul {
-                list-style: none;
-
-                li {
-                    position: relative; 
-                    padding-left: 22px; 
-                  }
-
-                  .cons {
-                    text-decoration: line-through;
-                    color: rgba(109, 109, 109, 1);
-                  }
-
-                li::before {
-                    content: ""; 
-                    position: absolute;
-                    left: 0;
-                    top: 0px; 
-                    width: 16px; 
-                    height: 16px; 
-                    background-image: url('img/decoration/golden_bullet.svg');
-                    background-size: contain; 
-                    background-repeat: no-repeat;
-                  }
-                li+.cons::before {
-                    background-image: url('img/standart_cons.svg');
-                }  
-            }
-        }
-
-        .tarif_golden_card {
-            color: #191919;
-            background: var(--gold-gradient);
-
-
-            ul {
-                list-style: none;
-
-                li {
-                    position: relative; 
-                    padding-left: 22px; 
-                    color: #191919;
-                  }
-
-                li::before {
-                    content: ""; 
-                    position: absolute;
-                    left: 0;
-                    top: 0px; 
-                    width: 16px; 
-                    height: 16px; 
-                    background-image: url('img/decoration/white_bullet.svg');
-                    background-size: contain; 
-                    background-repeat: no-repeat;
-                  }
-
-                  .cons {
-                    text-decoration: line-through;
-                    color: white;
-                  }
-
-                  li+.cons::before {
-                    background-image: url('img/golden_cons.svg');
-                }  
-            }
-            .normal {
-                color: white;
-            }
-
-            .tarif_card_bottom {
-                h4 {
-                    color: white;
-                    font-weight: 400;
-                }
-            }
-        }
-    }
-    .morecards {
-        .tarif_card {
-            max-width: 400px;
-        }
-    }
-}
+/* Навигация слайдера */
 .slider-nav {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 0;
-  }
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
 
-  .slider-prev,
-  .slider-next {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #cf9f66;
-  }
+.slider-prev,
+.slider-next {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #cf9f66;
+}
 
-  .slider-dots {
-    display: flex;
-    gap: 10px;
-  }
-
+.slider-dots {
+  display: flex;
+  gap: 10px;
+}
 
 .slider-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #2B2B2B 0%, #3B3B3B 100%);
-    cursor: pointer;
-    transition: 
-      width 0.3s ease,
-      height 0.3s ease,
-      background 0.3s ease,
-      border-radius 0.3s ease; 
-  }
-  
-  .slider-dot.active {
-    background: #cf9f66; 
-    width: 24px; 
-    height: 12px; 
-    border-radius: 10px; 
-  }
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #2b2b2b 0%, #3b3b3b 100%);
+  cursor: pointer;
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+.slider-dot.active {
+  background: #cf9f66;
+  width: 24px;
+  height: 12px;
+  border-radius: 10px;
+}
 
 
 .bux_accordion_wrapper {
@@ -1050,6 +1308,13 @@ summary::-webkit-details-marker,  summary::marker {
     display: none;
 }
 
+
+@media (max-width: 1100px) {
+    .twocards .tarif_card {
+        width: 400px;
+    }
+}
+
 @media (max-width: 1024px) { 
     h1 {
         font-size: 64px;
@@ -1155,7 +1420,7 @@ summary::-webkit-details-marker,  summary::marker {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 27px;
-                padding-top: 56px;
+                padding-top: 32px;
                 padding-bottom: 32px;
             }
             .about_btn_wrapper {
@@ -1166,7 +1431,9 @@ summary::-webkit-details-marker,  summary::marker {
             }
         }
     }
-
+    .about_wrapper .about_text_block .pros_wrapper .pros_block {
+        gap: 20px;
+    }
     .info_section .info_bottom {
         padding-top: 32px;
         gap: 32px;
@@ -1199,6 +1466,16 @@ summary::-webkit-details-marker,  summary::marker {
     }
       
 }
+@media (max-width: 1100px) {
+    .twocards-block {
+        .tarif_cards_wrapper {
+            .tarif_card {
+                max-width: 400px!important;
+                width: 100%;
+            }
+        }
+    }
+}
 
 @media (max-width: 900px) { 
     .btn {
@@ -1218,26 +1495,87 @@ summary::-webkit-details-marker,  summary::marker {
         width: 100%;
         height: 100%;
     }
+    // .tarif_section .container {
+    //     width: auto;
+    //     max-width: fit-content;
+    // }
+    // .tarif_section .tarif_cards_wrapper {
+    //     display: flex;
+    //     overflow-x: auto;
+    //     scroll-snap-type: x mandatory;
+    //     scroll-behavior: smooth;
+    //     -webkit-overflow-scrolling: touch;
+    //     padding-bottom: 60px;
+    //     gap: 15px;
+    //     padding-left: 15px;
+    //     padding-right: 15px;
+    //   }
 
-    .tarif_cards_wrapper {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 60px;
-        gap: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
-      }
+    //   .tarif_card {
+    //     width: calc(100% - 110px);
+    //     max-width: none;
+    //     scroll-snap-align: center;
+    //   }
 
-      .tarif_card {
-        width: calc(100% - 110px);
+
+}
+@media (max-width: 768px) {
+    .container {
+        width: 700px;
+    }
+    // .tarif_section .tarif_cards_wrapper .tarif_card {
+    //     width: calc(100% - 60px);
+    //     scroll-snap-align: center;
+    // }
+}
+@media (max-width: 500px) {
+
+    .tarif_card {
+        width: calc(100% - 25px);
         max-width: none;
         scroll-snap-align: center;
-      }
+        height: auto;
+        padding: 20px;
+        gap: 24px;
+    }
 
-      .slider-nav {
+    
+    .container {
+        max-width: 343px;
+    }
+    .about_wrapper .about_text_block .pros_wrapper .pros_block .pros_item {
+        max-width: 100%;
+    }
+    .accordion_item summary div {
+        flex-direction: column;
+        gap: 4px;
+        align-items: self-start;
+        color: white;
+    }
+    summary div span:last-child{
+        font-size: 14px;
+        max-width: 292px;
+        text-align: left;
+    }
+    .info_section .info_top {
+        text-align: center;
+    }
+    .tarif_section .container .heading {
+        text-align: center;
+    }
+    .bussinnes_section .container h2 {
+        text-align: center;
+    }
+    .bux_accordion_wrapper .accordion_item summary div span:last-child {
+        max-width: 287px;
+    }
+    .personal_consultation_section .personal_wrapper {
+        gap: 23px;
+    }
+    .personal_consultation_section {
+        background-size: cover;
+    }
+    .slider-nav {
         display: flex;
       }
       .moved {
@@ -1275,62 +1613,60 @@ summary::-webkit-details-marker,  summary::marker {
     .faq_section {
         padding: 100px 0;
     }
-}
-@media (max-width: 768px) {
-    .container {
-        width: 700px;
-    }
-    .tarif_section .tarif_cards_wrapper .tarif_card {
-        width: calc(100% - 60px);
-        // max-width: none;
+
+    .eclipce_desk {
+        display: none;
+      }
+      .eclipce_mob {
+            display: block;
+        }
+
+      .tarif_section {
+        align-items: unset;
+      }
+      .tarif_cards_wrapper {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 60px;
+        gap: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .twocards .tarif_card {
+        width: calc(100% - 30px);
+        }
+
+      .tarif_card {
+        width: calc(100% - 25px);
+        max-width: none;
         scroll-snap-align: center;
-    }
-}
-@media (max-width: 500px) {
-    
-    .container {
-        max-width: 343px;
-    }
-    .about_wrapper .about_text_block .pros_wrapper .pros_block .pros_item {
-        max-width: 100%;
-    }
-    .accordion_item summary div {
-        flex-direction: column;
-        gap: 4px;
-        align-items: self-start;
-        color: white;
-    }
-    summary div span:last-child{
-        font-size: 14px;
-        max-width: 292px;
-        text-align: left;
-    }
-    .info_section .info_top {
-        text-align: center;
-    }
-    .tarif_section .container .heading {
-        text-align: center;
-    }
-    .bussinnes_section .container h2 {
-        text-align: center;
-    }
-    .bux_accordion_wrapper .accordion_item summary div span:last-child {
-        max-width: 287px;
-    }
-    .personal_consultation_section .personal_wrapper {
-        gap: 23px;
-    }
-    .personal_consultation_section {
-        background-size: cover;
-    }
-    
-    .tarif_section .tarif_cards_wrapper .tarif_card {
-        width: calc(100% - 44px);
-        scroll-snap-align: center;
+        height: auto;
         padding: 20px;
         gap: 24px;
+      }
+
+      .slider-nav {
+        display: flex;
+      }
+
+      .progwrapper {
+        width: 100%;
+        padding-top: 0px;
+        gap: 32px;
+        padding: 0 15px;
+      }
+    .tarif_section  .container {
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        width: auto;
+        max-width: 100%;
     }
-    .tarif_section .tarif_cards_wrapper .tarif_card .tarif_card_bottom {
+        .tarif_section .tarif_cards_wrapper .tarif_card .tarif_card_bottom {
         gap: 32px;
         padding-top: 36px;
     }
@@ -1342,14 +1678,6 @@ summary::-webkit-details-marker,  summary::marker {
         font-size: 14px;
         gap: 12px;
     }
-    .morecards {
-        .tarif_card {
-            max-width: 320px;
-            width: 343px;
-            scroll-snap-align: center;
-        }
-    }
-
     .tarif_section {
         .eclipce_desk {
             display: none;
@@ -1358,39 +1686,32 @@ summary::-webkit-details-marker,  summary::marker {
             display: block;
         }
     }
+    // .tarif_section .container:last-child {
+    //     padding-top: 100px;
+    //     gap: 32px;
     
-    // .tarif_section {
-    //     overflow-x: visible; /* ✅ Убрать clip, иначе соседние карточки не видны */
-    //     align-items: stretch; /* убираем центрирование, чтобы ширина работала корректно */
-    //   }
+    //     h2 {
+    //         padding-bottom: 16px;
+    //     }
+    // }
+    .tarif_section .container {
+        h2 {
+            text-align: center;
+        }
+    }    
     
-    //   .slider-container {
-    //     overflow: visible;
-    //   }
-    
-    //   .tarif_cards_wrapper {
-    //     padding: 0 24px; /* немного отступов по краям */
-    //     overflow-x: auto;
-    //     scroll-snap-type: x mandatory;
-    //     -webkit-overflow-scrolling: touch;
-    //   }
-    
-    //   .tarif_cards_wrapper::-webkit-scrollbar {
-    //     display: none;
-    //   }
-    
-    //   .tarif_card {
-    //     flex: 0 0 auto;
-    //     width: calc(100% - 80px); /* ✅ карточки меньше контейнера */
-    //     margin: 0 10px;
-    //     scroll-snap-align: center; /* ✅ выравнивание по центру */
-    //   }
+}
 
-    //   .morecards .tarif_card {
-    //     flex: 0 0 auto;
-    //     width: calc(100% - 80px); /* ✅ карточки меньше контейнера */
-    //     margin: 0 10px;
-    //     scroll-snap-align: center; /* ✅ выравнивание по центру */
-    //   }
-    
+@media (max-width: 425px) {
+    .tarif_cards_wrapper {
+        padding-left: 10%;
+        padding-right: 15px;
+    }
+
+}
+@media (max-width: 375px) {
+    .tarif_cards_wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
